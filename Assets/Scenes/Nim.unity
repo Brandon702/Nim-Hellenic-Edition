@@ -1678,10 +1678,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1505946067}
   m_HandleRect: {fileID: 2118450566}
   m_Direction: 0
-  m_MinValue: -100
-  m_MaxValue: 50
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 1
-  m_Value: 50
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3138,6 +3138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 583912307}
   - component: {fileID: 583912308}
+  - component: {fileID: 583912309}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -3176,6 +3177,14 @@ MonoBehaviour:
   state: 0
   gameOverPanel: {fileID: 1099935055}
   difficulty: 1
+--- !u!81 &583912309
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583912306}
+  m_Enabled: 1
 --- !u!1 &592397243
 GameObject:
   m_ObjectHideFlags: 0
@@ -4909,10 +4918,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 96130865}
   m_HandleRect: {fileID: 58451632}
   m_Direction: 0
-  m_MinValue: -100
-  m_MaxValue: 50
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 1
-  m_Value: 50
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5303,10 +5312,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1475030089}
   m_HandleRect: {fileID: 1333765321}
   m_Direction: 0
-  m_MinValue: -100
-  m_MaxValue: 50
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 1
-  m_Value: 50
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
