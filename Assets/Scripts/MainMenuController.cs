@@ -21,6 +21,16 @@ public class MainMenuController : MonoBehaviour
         OptionsPanel.SetActive(true);
         MainMenuPanel.SetActive(false);
         PausePanel.SetActive(false);
+        GameController.Instance.state = eState.OPTIONS;
+    }
+
+    public void Instructions()
+    {
+        gameObject.SetActive(false);
+        InstructionsPanel.SetActive(true);
+        MainMenuPanel.SetActive(false);
+        PausePanel.SetActive(false);
+        GameController.Instance.state = eState.INSTRUCTIONS;
     }
 
     public void Credits()
@@ -28,6 +38,7 @@ public class MainMenuController : MonoBehaviour
         gameObject.SetActive(false);
         MainMenuPanel.SetActive(false);
         CreditsPanel.SetActive(true);
+        GameController.Instance.state = eState.CREDITS;
     }
 
     public void BackToMenu()
@@ -38,6 +49,7 @@ public class MainMenuController : MonoBehaviour
         CreditsPanel.SetActive(false);
         InstructionsPanel.SetActive(false);
         GameOverPanel.SetActive(false);
+        GameController.Instance.state = eState.TITLE;
     }
 
     public void BackToPause()
@@ -48,12 +60,14 @@ public class MainMenuController : MonoBehaviour
         CreditsPanel.SetActive(false);
         InstructionsPanel.SetActive(false);
         GameOverPanel.SetActive(false);
+        GameController.Instance.state = eState.PAUSE;
     }
 
     public void GameOver()
     {
         gameObject.SetActive(false);
         GameOverPanel.SetActive(true);
+        GameController.Instance.state = eState.GAMEOVER;
     }
 
     public void ExitGame()

@@ -69,5 +69,6 @@ public enum eState
     OPTIONS,
     INSTRUCTIONS,
     GAMEOVER,
+    CREDITS,
     EXITGAME
 }
