@@ -4,43 +4,60 @@ using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {
-    public GameObject optionPanel, creditsPanel, VictoryPanel;
+    public GameObject OptionsPanel, CreditsPanel, InstructonsPanel, GameOverPanel, MainMenuPanel, PausePanel;
 
     public void StartGame()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(true);
+        MainMenuPanel.SetActive(false);
+        GameOverPanel.SetActive(false);
         GameController.Instance.state = eState.GAME;
+        
     }
 
     public void Options()
     {
         gameObject.SetActive(false);
-        optionPanel.SetActive(true);
+        OptionsPanel.SetActive(true);
+        MainMenuPanel.SetActive(false);
+        PausePanel.SetActive(false);
     }
 
     public void Credits()
     {
         gameObject.SetActive(false);
-        creditsPanel.SetActive(true);
+        MainMenuPanel.SetActive(false);
+        CreditsPanel.SetActive(true);
     }
 
     public void BackToMenu()
     {
-        gameObject.SetActive(true);
-        optionPanel.SetActive(false);
-        creditsPanel.SetActive(false);
-        VictoryPanel.SetActive(false);
+        gameObject.SetActive(false);
+        MainMenuPanel.SetActive(true);
+        OptionsPanel.SetActive(false);
+        CreditsPanel.SetActive(false);
+        InstructonsPanel.SetActive(false);
+        GameOverPanel.SetActive(false);
     }
 
-    public void Victory()
+    public void BackToPause()
+    {
+        gameObject.SetActive(true);
+        PausePanel.SetActive(true);
+        OptionsPanel.SetActive(false);
+        CreditsPanel.SetActive(false);
+        InstructonsPanel.SetActive(false);
+        GameOverPanel.SetActive(false);
+    }
+
+    public void GameOver()
     {
         gameObject.SetActive(false);
-        VictoryPanel.SetActive(true);
+        GameOverPanel.SetActive(true);
     }
 
     public void ExitGame()
     {
         Application.Quit();
     }
-
 }
