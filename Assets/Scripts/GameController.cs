@@ -38,6 +38,7 @@ public class GameController : MonoBehaviour
     [Header("Other variables")]
     public eState state = eState.TITLE;
     public GameObject gameOverPanel;
+    [Range(0,1)]public int difficulty = 0;
 
     // Start is called before the first frame update
     void Start()
