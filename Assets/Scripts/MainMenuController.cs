@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {
-    public GameObject OptionsPanel, CreditsPanel, InstructonsPanel, GameOverPanel, MainMenuPanel, PausePanel;
+    public GameObject OptionsPanel, CreditsPanel, InstructionsPanel, GameOverPanel, MainMenuPanel, PausePanel;
 
     public void StartGame()
     {
@@ -36,7 +36,7 @@ public class MainMenuController : MonoBehaviour
         MainMenuPanel.SetActive(true);
         OptionsPanel.SetActive(false);
         CreditsPanel.SetActive(false);
-        InstructonsPanel.SetActive(false);
+        InstructionsPanel.SetActive(false);
         GameOverPanel.SetActive(false);
     }
 
@@ -46,7 +46,7 @@ public class MainMenuController : MonoBehaviour
         PausePanel.SetActive(true);
         OptionsPanel.SetActive(false);
         CreditsPanel.SetActive(false);
-        InstructonsPanel.SetActive(false);
+        InstructionsPanel.SetActive(false);
         GameOverPanel.SetActive(false);
     }
 
