@@ -804,7 +804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &220020147
 RectTransform:
   m_ObjectHideFlags: 0
@@ -886,8 +886,8 @@ MonoBehaviour:
   GameOverPanel: {fileID: 1099935055}
   MainMenuPanel: {fileID: 220020146}
   PausePanel: {fileID: 1213478558}
-  GameSettingsPanel1: {fileID: 0}
-  GameSettingsPanel2: {fileID: 0}
+  GameSettingsPanel1: {fileID: 171515144}
+  GameSettingsPanel2: {fileID: 1337390829}
 --- !u!1 &237992251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,7 +1456,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6102,7 +6102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1337390830
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6613,7 +6613,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
