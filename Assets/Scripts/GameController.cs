@@ -56,6 +56,10 @@ public class GameController : MonoBehaviour
         if (state == eState.GAME)
         {
             //Check if list[1] obj is enabled for game over
+           /* if (gameObject.GetComponent<Button>().interactable == false)
+            {
+                GameController.Instance.state = eState.GAMEOVER;
+            }*/
         }
 
         if (state == eState.STARTGAME)
