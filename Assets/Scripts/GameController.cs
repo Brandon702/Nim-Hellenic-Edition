@@ -42,6 +42,7 @@ public class GameController : MonoBehaviour
     [Range(0,1)]public int difficulty = 0;
     public List<GameObject> runes = new List<GameObject>();
     public List<GameObject> easyRunes = new List<GameObject>();
+    public int row;
 
     // Start is called before the first frame update
     void Start()
@@ -61,17 +62,25 @@ public class GameController : MonoBehaviour
             //Check if list[1] obj is enabled for game over
             if (difficulty == 0)
             {
+                row = 3;
                 foreach (var obj in easyRunes)
                     obj.SetActive(true);
                 Console.WriteLine("Easy selected");
             }
             else
             {
+                row = 4;
                 foreach (var obj in runes)
                     obj.SetActive(true);
                 Console.WriteLine("Hard selected");
             }
             Console.WriteLine("Game Activated");
+        }
+
+        if(row == 1)
+        {
+            //Game over
+            GameOver();
         }
     }
 
