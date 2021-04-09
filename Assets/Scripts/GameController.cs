@@ -63,15 +63,15 @@ public class GameController : MonoBehaviour
             {
                 foreach (var obj in easyRunes)
                     obj.SetActive(true);
-                Console.WriteLine("Easy selected");
+                Debug.Log("Easy selected");
             }
             else
             {
                 foreach (var obj in runes)
                     obj.SetActive(true);
-                Console.WriteLine("Hard selected");
+                Debug.Log("Hard selected");
             }
-            Console.WriteLine("Game Activated");
+            Debug.Log("Game Activated");
         }
     }
 
