@@ -39,11 +39,14 @@ public class GameController : MonoBehaviour
     public eState state = eState.TITLE;
     public GameObject gameOverPanel;
     [Range(0,1)]public int difficulty = 0;
+    public List<GameObject> runes = new List<GameObject>();
+    public List<GameObject> easyRunes = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
-
+        foreach (var obj in runes)
+            obj.SetActive(false);
     }
 
     // Update is called once per frame
@@ -52,19 +55,31 @@ public class GameController : MonoBehaviour
         //Game is running
         if (state == eState.GAME)
         {
-
+            //Check if list[1] obj is enabled for game over
         }
 
         if (state == eState.STARTGAME)
         {
             //Set runes active
-
+            //Easy goes up to index [8]
+            if(difficulty == 0)
+            {
+                foreach (var obj in easyRunes)
+                    obj.SetActive(true);
+            }
+            else
+            {
+                foreach (var obj in easyRunes)
+                    obj.SetActive(true);
+            }
         }
     }
 
     public void GameOver()
     {
         gameOverPanel.SetActive(true);
+        foreach (var obj in runes)
+            obj.SetActive(false);
     }
 }
 

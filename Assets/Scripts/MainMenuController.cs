@@ -33,7 +33,7 @@ public class MainMenuController : MonoBehaviour
         GameOverPanel.SetActive(false);
         GameSettingsPanel1.SetActive(false);
         GameSettingsPanel2.SetActive(true);
-        GameController.Instance.state = eState.MENU;
+        GameController.Instance.state = eState.STARTGAME;
     }
 
     public void Options()
