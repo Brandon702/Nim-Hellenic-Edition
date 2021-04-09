@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RuneButtons : MonoBehaviour
 {
+    int runeRow=0;
     public void TakeRune()
     {
 
