@@ -54,6 +54,12 @@ public class GameController : MonoBehaviour
         {
 
         }
+
+        if (state == eState.STARTGAME)
+        {
+            //Set runes active
+
+        }
     }
 
     public void GameOver()
@@ -65,6 +71,7 @@ public class GameController : MonoBehaviour
 public enum eState
 {
     TITLE,
+    STARTGAME,
     GAME,
     PAUSE,
     OPTIONS,
