@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,26 +15,29 @@ public class MainMenuController : MonoBehaviour
         GameSettingsPanel1.SetActive(false);
         GameSettingsPanel2.SetActive(false);
         GameController.Instance.state = eState.GAME;
+        Console.WriteLine("Start Game menu controller");
     }
 
     public void StartGameSettings1()
     {
         //Names
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         MainMenuPanel.SetActive(false);
         GameOverPanel.SetActive(false);
         GameSettingsPanel1.SetActive(true);
         GameController.Instance.state = eState.MENU;
+        Console.WriteLine("Settings1 menu controller");
     }
 
     public void StartGameSettings2()
     {
         //Difficulty
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         GameOverPanel.SetActive(false);
         GameSettingsPanel1.SetActive(false);
         GameSettingsPanel2.SetActive(true);
         GameController.Instance.state = eState.STARTGAME;
+        Console.WriteLine("Settings2 menu controller");
     }
 
     public void Options()
@@ -43,6 +47,7 @@ public class MainMenuController : MonoBehaviour
         MainMenuPanel.SetActive(false);
         PausePanel.SetActive(false);
         GameController.Instance.state = eState.OPTIONS;
+        Console.WriteLine("Options menu controller");
     }
 
     public void PauseOptions()
@@ -52,6 +57,7 @@ public class MainMenuController : MonoBehaviour
         MainMenuPanel.SetActive(false);
         PausePanel.SetActive(false);
         GameController.Instance.state = eState.OPTIONS;
+        Console.WriteLine("Options menu controller");
     }
 
     public void Instructions()
@@ -61,6 +67,7 @@ public class MainMenuController : MonoBehaviour
         MainMenuPanel.SetActive(false);
         PausePanel.SetActive(false);
         GameController.Instance.state = eState.INSTRUCTIONS;
+        Console.WriteLine("Instructions menu controller");
     }
 
     public void PauseInstructions()
@@ -70,6 +77,7 @@ public class MainMenuController : MonoBehaviour
         MainMenuPanel.SetActive(false);
         PausePanel.SetActive(false);
         GameController.Instance.state = eState.INSTRUCTIONS;
+        Console.WriteLine("Instructions menu controller");
     }
 
     public void Credits()
@@ -78,6 +86,7 @@ public class MainMenuController : MonoBehaviour
         MainMenuPanel.SetActive(false);
         CreditsPanel.SetActive(true);
         GameController.Instance.state = eState.CREDITS;
+        Console.WriteLine("Credits menu controller");
     }
 
     //Back to main menu
@@ -91,6 +100,7 @@ public class MainMenuController : MonoBehaviour
         InstructionsPanel.SetActive(false);
         GameOverPanel.SetActive(false);
         GameController.Instance.state = eState.TITLE;
+        Console.WriteLine("BacktoMenu menu controller");
     }
 
     //Back to pause menu
@@ -106,6 +116,7 @@ public class MainMenuController : MonoBehaviour
         PauseOptionsPanel.SetActive(false);
         PauseInstructionsPanel.SetActive(false);
         GameController.Instance.state = eState.PAUSE;
+        Console.WriteLine("BacktoPause menu controller");
     }
 
     public void GameOver()
@@ -113,6 +124,7 @@ public class MainMenuController : MonoBehaviour
         gameObject.SetActive(false);
         GameOverPanel.SetActive(true);
         GameController.Instance.state = eState.GAMEOVER;
+        Console.WriteLine("Gameover menu controller");
     }
 
     public void ExitGame()

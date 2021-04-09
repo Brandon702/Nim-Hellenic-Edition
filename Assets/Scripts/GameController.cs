@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
+using System;
 
 public class GameController : MonoBehaviour
 {
@@ -47,6 +48,8 @@ public class GameController : MonoBehaviour
     {
         foreach (var obj in runes)
             obj.SetActive(false);
+        difficulty = (int)GameObject.Find("DifficultySlider").GetComponent<Slider>().value;
+        Console.WriteLine("Start function called");
     }
 
     // Update is called once per frame
@@ -56,22 +59,19 @@ public class GameController : MonoBehaviour
         if (state == eState.GAME)
         {
             //Check if list[1] obj is enabled for game over
-        }
-
-        if (state == eState.STARTGAME)
-        {
-            //Set runes active
-            //Easy goes up to index [8]
-            if(difficulty == 0)
+            if (difficulty == 0)
             {
                 foreach (var obj in easyRunes)
                     obj.SetActive(true);
+                Console.WriteLine("Easy selected");
             }
             else
             {
-                foreach (var obj in easyRunes)
+                foreach (var obj in runes)
                     obj.SetActive(true);
+                Console.WriteLine("Hard selected");
             }
+            Console.WriteLine("Game Activated");
         }
     }
 
@@ -81,12 +81,17 @@ public class GameController : MonoBehaviour
         foreach (var obj in runes)
             obj.SetActive(false);
     }
+
+    public void DifficultyChanged()
+    {
+        difficulty = (int)GameObject.Find("DifficultySlider").GetComponent<Slider>().value;
+        Console.WriteLine("difficulty: " + difficulty);
+    }
 }
 
 public enum eState
 {
     TITLE,
-    STARTGAME,
     GAME,
     PAUSE,
     OPTIONS,
