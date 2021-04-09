@@ -59,7 +59,13 @@ public class GameController : MonoBehaviour
         if (state == eState.GAME)
         {
             //Check if list[1] obj is enabled for game over
-            if (difficulty == 0)
+        }
+
+        if (state == eState.STARTGAME)
+        {
+            //Set runes active
+            //Easy goes up to index [8]
+            if(difficulty == 0)
             {
                 foreach (var obj in easyRunes)
                     obj.SetActive(true);
