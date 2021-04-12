@@ -42,8 +42,8 @@ public class GameController : MonoBehaviour
     [Range(0,1)]public int difficulty = 0;
     public List<GameObject> runes = new List<GameObject>();
     public List<GameObject> easyRunes = new List<GameObject>();
-    public System.Random rand = new System.Random();
-    public bool forceOnce = true;
+    public int row;
+    public Audio
 
     // Start is called before the first frame update
     void Start()
@@ -63,56 +63,26 @@ public class GameController : MonoBehaviour
             //Check if list[1] obj is enabled for game over
             if (difficulty == 0)
             {
+                row = 3;
                 foreach (var obj in easyRunes)
                     obj.SetActive(true);
                 Debug.Log("Easy selected");
             }
             else
             {
+                row = 4;
                 foreach (var obj in runes)
                     obj.SetActive(true);
                 Debug.Log("Hard selected");
             }
-            Debug.Log("Game Activated"); 
-            if(forceOnce == true)
-            {
-                GameSession();
-                forceOnce = false;
-            }
+            Debug.Log("Game Activated");
         }
 
-    }
-
-    public void GameSession()
-    {
-        // Determine who goes first
-        int player1 = 1;
-        int player2 = 2;
-        var currentPlayer = username1;
-
-        int playerPick = rand.Next(player1, 3);
-        Debug.Log(playerPick);
-
-        if(playerPick == player1)
+        if(row == 1)
         {
-            currentPlayer = username1;
-            Debug.Log("Player 1 begins first.");
+            //Game over
+            GameOver();
         }
-        else if (playerPick == player2)
-        {
-            currentPlayer = username2;
-            Debug.Log("Player 2 begins first.");
-        }
-
-        // With whoever goes first, allow the player to click the rune, depending on how much they want to click in one row
-
-
-        // When the player is done with their choice, move the turn over to the next player
-
-
-        // When there is only one rune left, move the seesion over to gameover
-
-
     }
 
     public void GameOver()
