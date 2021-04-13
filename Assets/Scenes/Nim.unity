@@ -10967,16 +10967,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Artwork: Anais & Brandon
-
-    Programming: Anais & Brandon
-
-    Design:
-    Anais & Brandon
-
-    Sound: Brandon
-
-    Third party:'
+  m_text: "Artwork: Anais & Brandon\nProgramming: Anais & Brandon\nDesign: Anais
+    & Brandon\nSound: Brandon\nThird party:\nradojavor - Artwork\nSiLena_ART - Artwork\nJonatan
+    J\xE4rpehag - Music"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 531a3f1d5daad9c47a1a714f13de2e35, type: 2}
   m_sharedMaterial: {fileID: -1730116630610332357, guid: 531a3f1d5daad9c47a1a714f13de2e35, type: 2}
