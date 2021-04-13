@@ -134,10 +134,7 @@ public enum eState
     TITLE,
     GAME,
     PAUSE,
-    OPTIONS,
-    INSTRUCTIONS,
     GAMEOVER,
-    CREDITS,
     MENU,
     EXITGAME
 }
