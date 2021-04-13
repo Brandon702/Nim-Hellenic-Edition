@@ -1174,14 +1174,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 583912306}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1206,7 +1218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dad39ecc318f66849958aa1bed83cf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c476c8808c480742806eea0ab8d557e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1657,7 +1669,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 229391290}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &229391290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1678,7 +1714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dad39ecc318f66849958aa1bed83cf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5edcdce8663da954da1df65d79fd5f48, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3194,7 +3230,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 362234900}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &362234900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3215,7 +3275,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dad39ecc318f66849958aa1bed83cf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6e31b09f1bb23549b39ca480653a340, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4115,7 +4175,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 533701075}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 14
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &533701075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4136,7 +4220,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dad39ecc318f66849958aa1bed83cf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 091630dfef58b8640a2a36d8118cf15a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6720,7 +6804,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 787148652}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 16
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &787148652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6741,7 +6849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dad39ecc318f66849958aa1bed83cf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c476c8808c480742806eea0ab8d557e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6974,7 +7082,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 798060424}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &798060424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6995,7 +7127,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dad39ecc318f66849958aa1bed83cf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9ff5ad87539f83b4b9f70a50bbad7101, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7211,7 +7343,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 816096034}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 11
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &816096034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7232,7 +7388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dad39ecc318f66849958aa1bed83cf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d9988caffaea6834496cf64046750272, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7521,7 +7677,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dad39ecc318f66849958aa1bed83cf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad2301d3e7a5f434988182a4fa5e0259, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8533,7 +8689,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 925487581}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 13
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &925487581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8554,7 +8734,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dad39ecc318f66849958aa1bed83cf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d57587d15e065845a290cc58eb0a898, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9896,7 +10076,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1105380954}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1105380954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9917,7 +10121,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dad39ecc318f66849958aa1bed83cf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 091630dfef58b8640a2a36d8118cf15a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10396,7 +10600,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1171242427}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1171242427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11174,7 +11402,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1305443103}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1305443103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11195,7 +11447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dad39ecc318f66849958aa1bed83cf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e75c4f79974ee7547a6a3ccd93577c00, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11369,7 +11621,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1334478701}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1334478701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11390,7 +11666,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dad39ecc318f66849958aa1bed83cf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d57587d15e065845a290cc58eb0a898, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11568,7 +11844,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1343048246}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1343048246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11589,7 +11889,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dad39ecc318f66849958aa1bed83cf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5edcdce8663da954da1df65d79fd5f48, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13257,7 +13557,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1642873704}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1642873704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13278,7 +13602,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dad39ecc318f66849958aa1bed83cf9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05eb3d5951964ee43848e2df24cd0808, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14604,7 +14928,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1876283417}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: RuneClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 15
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 583912308}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: setRow
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1876283417
 MonoBehaviour:
   m_ObjectHideFlags: 0
