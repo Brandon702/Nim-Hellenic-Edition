@@ -33,8 +33,8 @@ public class GameController : MonoBehaviour
     #endregion
     
     [Header("Players")]
-    public string username1;
-    public string username2;
+    string username1 = "Player";
+    string username2 = "Jonathan";
 
     [Header("Other variables")]
     public eState state = eState.TITLE;
@@ -44,6 +44,8 @@ public class GameController : MonoBehaviour
     public List<GameObject> easyRunes = new List<GameObject>();
     public System.Random rand = new System.Random();
     public bool forceOnce = true;
+
+    public InputSystem input;
 
     // Start is called before the first frame update
     void Start()
@@ -65,17 +67,18 @@ public class GameController : MonoBehaviour
             {
                 foreach (var obj in easyRunes)
                     obj.SetActive(true);
-                Debug.Log("Easy selected");
+                //Debug.Log("Easy selected");
             }
             else
             {
                 foreach (var obj in runes)
                     obj.SetActive(true);
-                Debug.Log("Hard selected");
+                //Debug.Log("Hard selected");
             }
-            Debug.Log("Game Activated"); 
+            //Debug.Log("Game Activated"); 
             if(forceOnce == true)
             {
+                Debug.Log("\nUser1: " + username1 + "\nUser2: "+ username2);
                 GameSession();
                 forceOnce = false;
             }
@@ -113,6 +116,21 @@ public class GameController : MonoBehaviour
         // When there is only one rune left, move the seesion over to gameover
 
 
+    }
+
+    public void SetUserName1(string val)
+    {
+        username1 = val;
+    }
+
+    public void SetUserName2(string val)
+    {
+        username2 = val;
+    }
+
+    public void test()
+    {
+        //input.Game.Mouse.performed() += ;
     }
 
     public void GameOver()

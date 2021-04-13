@@ -51,6 +51,33 @@ public class @InputSystem : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Game"",
+            ""id"": ""fec36b9d-7850-411d-bd8c-e1792e4176cd"",
+            ""actions"": [
+                {
+                    ""name"": ""Mouse"",
+                    ""type"": ""Button"",
+                    ""id"": ""4a610404-47c4-4f53-bb94-05b801898a55"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""e1e42da4-60fd-456b-99a3-6f6e0791d23b"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Mouse"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -58,6 +85,9 @@ public class @InputSystem : IInputActionCollection, IDisposable
         // Main
         m_Main = asset.FindActionMap("Main", throwIfNotFound: true);
         m_Main_PauseGame = m_Main.FindAction("Pause Game", throwIfNotFound: true);
+        // Game
+        m_Game = asset.FindActionMap("Game", throwIfNotFound: true);
+        m_Game_Mouse = m_Game.FindAction("Mouse", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -136,8 +166,45 @@ public class @InputSystem : IInputActionCollection, IDisposable
         }
     }
     public MainActions @Main => new MainActions(this);
+
+    // Game
+    private readonly InputActionMap m_Game;
+    private IGameActions m_GameActionsCallbackInterface;
+    private readonly InputAction m_Game_Mouse;
+    public struct GameActions
+    {
+        private @InputSystem m_Wrapper;
+        public GameActions(@InputSystem wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Mouse => m_Wrapper.m_Game_Mouse;
+        public InputActionMap Get() { return m_Wrapper.m_Game; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(GameActions set) { return set.Get(); }
+        public void SetCallbacks(IGameActions instance)
+        {
+            if (m_Wrapper.m_GameActionsCallbackInterface != null)
+            {
+                @Mouse.started -= m_Wrapper.m_GameActionsCallbackInterface.OnMouse;
+                @Mouse.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnMouse;
+                @Mouse.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnMouse;
+            }
+            m_Wrapper.m_GameActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Mouse.started += instance.OnMouse;
+                @Mouse.performed += instance.OnMouse;
+                @Mouse.canceled += instance.OnMouse;
+            }
+        }
+    }
+    public GameActions @Game => new GameActions(this);
     public interface IMainActions
     {
         void OnPauseGame(InputAction.CallbackContext context);
+    }
+    public interface IGameActions
+    {
+        void OnMouse(InputAction.CallbackContext context);
     }
 }
