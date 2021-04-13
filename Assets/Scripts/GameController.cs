@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
 using System;
+using System.Linq;
 
 public class GameController : MonoBehaviour
 {
@@ -42,9 +43,11 @@ public class GameController : MonoBehaviour
     [Range(0,1)]public int difficulty = 0;
     public List<GameObject> runes = new List<GameObject>();
     public List<GameObject> easyRunes = new List<GameObject>();
+    List<GameObject> allRunes = new List<GameObject>();
     public System.Random rand = new System.Random();
     public bool forceOnce = true;
 
+    int selectedRow=0;
     public InputSystem input;
 
     // Start is called before the first frame update
@@ -65,12 +68,14 @@ public class GameController : MonoBehaviour
             //Check if list[1] obj is enabled for game over
             if (difficulty == 0)
             {
+                selectedRow = 3;
                 foreach (var obj in easyRunes)
                     obj.SetActive(true);
                 //Debug.Log("Easy selected");
             }
             else
             {
+                selectedRow = 4;
                 foreach (var obj in runes)
                     obj.SetActive(true);
                 //Debug.Log("Hard selected");
@@ -107,6 +112,21 @@ public class GameController : MonoBehaviour
             Debug.Log("Player 2 begins first.");
         }
 
+        if (difficulty == 0)
+        {
+            for (int i = 0; i > easyRunes.Count; i++)
+            {
+                allRunes[i] = easyRunes[i];
+            }
+        }
+        else if (difficulty == 1)
+        {
+            for (int i = 0; i > runes.Count; i++)
+            {
+                allRunes[i] = runes[i];
+            }
+        }
+
         // With whoever goes first, allow the player to click the rune, depending on how much they want to click in one row
 
 
@@ -128,9 +148,18 @@ public class GameController : MonoBehaviour
         username2 = val;
     }
 
-    public void test()
+    public void RuneClicked(int runeIndex, int row)
     {
-        //input.Game.Mouse.performed() += ;
+        Debug.Log("CLICKED");
+        
+        if(row == selectedRow)
+        {
+            //Disable all runes after the indexed rune
+            for (int i = runeIndex; i < allRunes.Count; i++)
+            {
+                allRunes[i].SetActive(false);
+            }
+        }
     }
 
     public void GameOver()
