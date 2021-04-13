@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour
     public List<GameObject> runes = new List<GameObject>();
     public List<GameObject> easyRunes = new List<GameObject>();
     public int row;
-    public Audio
+    //public Audio
 
     // Start is called before the first frame update
     void Start()
