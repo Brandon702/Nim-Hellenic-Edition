@@ -160,11 +160,30 @@ public class GameController : MonoBehaviour
         
         if(runeRow == selectedRow)
         {
+            if (runeIndex == 0)
+            {
+                GameOver();
+            }
             //Disable all runes after the indexed rune
             for (int i = runeIndex; i < allRunes.Count; i++)
             {
                 allRunes[i].SetActive(false);
             }
+        }
+        if(runeIndex == 9)
+        {
+            //Set to row 3
+            selectedRow = 3;
+        }
+        if(runeIndex == 4)
+        {
+            //Set to row 2
+            selectedRow = 2;
+        }
+        if(runeIndex == 1)
+        {
+            //Set to row 1
+            selectedRow = 1;
         }
     }
 
