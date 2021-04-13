@@ -33,8 +33,8 @@ public class GameController : MonoBehaviour
     #endregion
     
     [Header("Players")]
-    public string username1;
-    public string username2;
+    string username1 = "Player";
+    string username2 = "Jonathan";
 
     [Header("Other variables")]
     public eState state = eState.TITLE;
@@ -44,6 +44,8 @@ public class GameController : MonoBehaviour
     public List<GameObject> easyRunes = new List<GameObject>();
     public System.Random rand = new System.Random();
     public bool forceOnce = true;
+
+    public InputSystem input;
 
     // Start is called before the first frame update
     void Start()
@@ -124,6 +126,11 @@ public class GameController : MonoBehaviour
     public void SetUserName2(string val)
     {
         username2 = val;
+    }
+
+    public void test()
+    {
+        //input.Game.Mouse.performed() += ;
     }
 
     public void GameOver()
