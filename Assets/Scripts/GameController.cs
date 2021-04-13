@@ -47,6 +47,7 @@ public class GameController : MonoBehaviour
     public System.Random rand = new System.Random();
     public bool forceOnce = true;
 
+    int runeRow;
     int selectedRow=0;
     public InputSystem input;
 
@@ -148,11 +149,16 @@ public class GameController : MonoBehaviour
         username2 = val;
     }
 
-    public void RuneClicked(int runeIndex, int row)
+    public void setRow(int row)
+    {
+        runeRow = row;
+    }
+
+    public void RuneClicked(int runeIndex)
     {
         Debug.Log("CLICKED");
         
-        if(row == selectedRow)
+        if(runeRow == selectedRow)
         {
             //Disable all runes after the indexed rune
             for (int i = runeIndex; i < allRunes.Count; i++)
