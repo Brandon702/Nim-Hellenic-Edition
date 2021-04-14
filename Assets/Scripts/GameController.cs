@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine.Events;
 using System;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -67,27 +68,37 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (state == eState.MENU)
+        {
+            turnDisplay.SetActive(false);
+            foreach (var obj in runes)
+                obj.SetActive(false);
+            forceOnce = true;
+        }
+
         //Game is running
         if (state == eState.GAME)
         {
-            //Check if list[1] obj is enabled for game over
-            if (difficulty == 0)
+            //If on menu state deactivate
+            
+
+            if (forceOnce == true)
             {
-                foreach (var obj in easyRunes)
-                    obj.SetActive(true);
-                //Debug.Log("Easy selected");
-            }
-            else
-            {
-                foreach (var obj in runes)
-                    obj.SetActive(true);
-                //Debug.Log("Hard selected");
-            }
-            //Debug.Log("Game Activated"); 
-            if(forceOnce == true)
-            {
-                Debug.Log("\nUser1: " + username1 + "\nUser2: "+ username2);
+                
+                if (difficulty == 0)
+                {
+                    foreach (var obj in easyRunes)
+                        obj.SetActive(true);
+                    //Debug.Log("Easy selected");
+                }
+                else
+                {
+                    foreach (var obj in runes)
+                        obj.SetActive(true);
+                    //Debug.Log("Hard selected");
+                }
                 GameSession();
+                
                 forceOnce = false;
             }
         }
@@ -96,6 +107,11 @@ public class GameController : MonoBehaviour
 
     public void GameSession()
     {
+        for (int i = 0; i < runes.Count; i++)
+        {
+            runes[i].GetComponent<Button>().interactable = true;
+            Debug.Log("Loop Ran");
+        }
         // Determine who goes first
         int player1 = 1;
         int player2 = 2;
@@ -226,8 +242,15 @@ public class GameController : MonoBehaviour
         gameOverPanel.SetActive(true);
         foreach (var obj in runes)
             obj.SetActive(true);
-        forceOnce = true;
+        for (int i = 0; i < runes.Count; i++)
+        {
+            runes[i].GetComponent<Button>().interactable = true;
+        }
+        foreach (var obj in runes)
+            obj.SetActive(false);
     }
+
+    
 
     public void DifficultyChanged()
     {

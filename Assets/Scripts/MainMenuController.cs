@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class MainMenuController : MonoBehaviour
         GameOverPanel.SetActive(false);
         GameSettingsPanel1.SetActive(false);
         GameSettingsPanel2.SetActive(true);
+        GameController.Instance.state = eState.MENU;
         Console.WriteLine("Settings2 menu controller");
     }
 
@@ -123,8 +125,12 @@ public class MainMenuController : MonoBehaviour
     {
         gameObject.SetActive(false);
         GameOverPanel.SetActive(true);
-        GameController.Instance.state = eState.GAMEOVER;
+        GameController.Instance.state = eState.MENU;
         Console.WriteLine("Gameover menu controller");
+    }
+    public void ResetApplication()
+    {
+        SceneManager.LoadScene("Nim");
     }
 
     public void ExitGame()
