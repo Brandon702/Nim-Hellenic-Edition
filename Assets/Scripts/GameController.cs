@@ -43,10 +43,14 @@ public class GameController : MonoBehaviour
     [Range(0,1)]public int difficulty = 0;
     public List<GameObject> runes = new List<GameObject>();
     public List<GameObject> easyRunes = new List<GameObject>();
-    //List<GameObject> allRunes = new List<GameObject>();
+    public GameObject turnDisplay;
+    //public GameObject winnerDisplay;
     public System.Random rand = new System.Random();
     public bool forceOnce = true;
 
+    string currentPlayer;
+    public TextMeshProUGUI playerTurn;
+    public TextMeshProUGUI winner;
     int runeRow;
     int selectedRow=99999;
     public InputSystem input;
@@ -95,7 +99,7 @@ public class GameController : MonoBehaviour
         // Determine who goes first
         int player1 = 1;
         int player2 = 2;
-        var currentPlayer = username1;
+        currentPlayer = username1;
 
         int playerPick = rand.Next(player1, 3);
         Debug.Log(playerPick);
@@ -103,29 +107,23 @@ public class GameController : MonoBehaviour
         if(playerPick == player1)
         {
             currentPlayer = username1;
+            playerTurn.text = username1;
             Debug.Log("Player 1 begins first.");
         }
         else if (playerPick == player2)
         {
             currentPlayer = username2;
+            playerTurn.text = username2;
             Debug.Log("Player 2 begins first.");
         }
-        Debug.Log("About to set row");
+        turnDisplay.SetActive(true);
         if (difficulty == 0)
         {
-            //for (int i = 0; i < easyRunes.Count; i++)
-            //{
-            //    allRunes[i] = easyRunes[i];
-            //}
             selectedRow = 2;
             Debug.Log("SelectedRow: " + selectedRow);
         }
         else if (difficulty == 1)
         {
-            //for (int i = 0; i < runes.Count; i++)
-            //{
-            //    allRunes[i] = runes[i];
-            //}
             selectedRow = 3;
             Debug.Log("SelectedRow: " + selectedRow);
         }
@@ -151,14 +149,30 @@ public class GameController : MonoBehaviour
         username2 = val;
     }
 
+
     public void setRow(int row)
     {
         runeRow = row;
     }
 
+    public void ChangePlayer()
+    {
+
+        if(currentPlayer == username1)
+        {
+            currentPlayer = username2;
+            playerTurn.text = username2;
+        }
+        else if (currentPlayer == username2)
+        {
+            currentPlayer = username1;
+            playerTurn.text = username1;
+        }
+    }
+
     public void RuneClicked(int runeIndex)
     {
-        
+        //if player = non computer run normally, otherwise do a random selection between 1-3 (safety might be needed)
         if(runeRow == selectedRow)
         {
             Debug.Log("Rune Index: " + runeIndex);
@@ -194,14 +208,25 @@ public class GameController : MonoBehaviour
                 selectedRow = 0;
                 Debug.Log("Setting rune row to 1");
             }
+            ChangePlayer();
         }
     }
 
     public void GameOver()
     {
+        if (currentPlayer == username1)
+        {
+            winner.text = username2 + " has won!";
+        }
+        else if (currentPlayer == username2)
+        {
+            winner.text = username1 + " has won!";
+        }
+
         gameOverPanel.SetActive(true);
         foreach (var obj in runes)
-            obj.SetActive(false);
+            obj.SetActive(true);
+        forceOnce = true;
     }
 
     public void DifficultyChanged()
