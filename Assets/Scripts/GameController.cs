@@ -43,12 +43,12 @@ public class GameController : MonoBehaviour
     [Range(0,1)]public int difficulty = 0;
     public List<GameObject> runes = new List<GameObject>();
     public List<GameObject> easyRunes = new List<GameObject>();
-    List<GameObject> allRunes = new List<GameObject>();
+    //List<GameObject> allRunes = new List<GameObject>();
     public System.Random rand = new System.Random();
     public bool forceOnce = true;
 
     int runeRow;
-    int selectedRow=0;
+    int selectedRow=99999;
     public InputSystem input;
 
     // Start is called before the first frame update
@@ -69,14 +69,12 @@ public class GameController : MonoBehaviour
             //Check if list[1] obj is enabled for game over
             if (difficulty == 0)
             {
-                selectedRow = 3;
                 foreach (var obj in easyRunes)
                     obj.SetActive(true);
                 //Debug.Log("Easy selected");
             }
             else
             {
-                selectedRow = 4;
                 foreach (var obj in runes)
                     obj.SetActive(true);
                 //Debug.Log("Hard selected");
@@ -112,20 +110,24 @@ public class GameController : MonoBehaviour
             currentPlayer = username2;
             Debug.Log("Player 2 begins first.");
         }
-
+        Debug.Log("About to set row");
         if (difficulty == 0)
         {
-            for (int i = 0; i > easyRunes.Count; i++)
-            {
-                allRunes[i] = easyRunes[i];
-            }
+            //for (int i = 0; i < easyRunes.Count; i++)
+            //{
+            //    allRunes[i] = easyRunes[i];
+            //}
+            selectedRow = 2;
+            Debug.Log("SelectedRow: " + selectedRow);
         }
         else if (difficulty == 1)
         {
-            for (int i = 0; i > runes.Count; i++)
-            {
-                allRunes[i] = runes[i];
-            }
+            //for (int i = 0; i < runes.Count; i++)
+            //{
+            //    allRunes[i] = runes[i];
+            //}
+            selectedRow = 3;
+            Debug.Log("SelectedRow: " + selectedRow);
         }
 
         // With whoever goes first, allow the player to click the rune, depending on how much they want to click in one row
@@ -156,34 +158,42 @@ public class GameController : MonoBehaviour
 
     public void RuneClicked(int runeIndex)
     {
-        Debug.Log("CLICKED");
         
         if(runeRow == selectedRow)
         {
+            Debug.Log("Rune Index: " + runeIndex);
+            Debug.Log("Rune Row: " + runeRow);
             if (runeIndex == 0)
             {
                 GameOver();
             }
             //Disable all runes after the indexed rune
-            for (int i = runeIndex; i < allRunes.Count; i++)
+            Debug.Log("Before For loop");
+            for (int i = runeIndex; i < runes.Count; i++)
             {
-                allRunes[i].SetActive(false);
+                //runes[i].SetActive(false);
+                runes[i].GetComponent<Button>().interactable = false;
+                Debug.Log("Loop Ran");
             }
-        }
-        if(runeIndex == 9)
-        {
-            //Set to row 3
-            selectedRow = 3;
-        }
-        if(runeIndex == 4)
-        {
-            //Set to row 2
-            selectedRow = 2;
-        }
-        if(runeIndex == 1)
-        {
-            //Set to row 1
-            selectedRow = 1;
+
+            if (runeIndex == 9)
+            {
+                //Set to row 3
+                selectedRow = 2;
+                Debug.Log("Setting rune row to 3");
+            }
+            if (runeIndex == 4)
+            {
+                //Set to row 2
+                selectedRow = 1;
+                Debug.Log("Setting rune row to 2");
+            }
+            if (runeIndex == 1)
+            {
+                //Set to row 1
+                selectedRow = 0;
+                Debug.Log("Setting rune row to 1");
+            }
         }
     }
 
