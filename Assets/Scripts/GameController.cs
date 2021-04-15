@@ -59,10 +59,9 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DifficultyChanged();
         foreach (var obj in runes)
             obj.SetActive(false);
-        difficulty = (int)GameObject.Find("DifficultySlider").GetComponent<Slider>().value;
-        Console.WriteLine("Start function called");
     }
 
     // Update is called once per frame
